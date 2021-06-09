@@ -1,5 +1,12 @@
+import 'package:app01/AgendamentoPage.dart';
 import 'package:app01/CadastroPage.dart';
-import 'package:app01/ComEstado.dart';
+import 'package:app01/IndexPage.dart';
+import 'package:app01/ListAgendaPage.dart';
+import 'package:app01/ListOrcamentoPage.dart';
+//import 'package:app01/ComEstado.dart';
+import 'package:app01/LoginScreen.dart';
+import 'package:app01/OrcamentoPage.dart';
+import 'package:app01/ServicosPage.dart';
 import 'package:flutter/material.dart';
 import 'Tema.dart';
 
@@ -18,10 +25,15 @@ class SemEstado extends StatelessWidget {
                   ? Brightness.dark
                   : Brightness.light,
             ),
-            initialRoute: '/',
+            initialRoute: '/home',
             routes: {
-              '/home': (context) => ComEstado(),
-              '/': (context) => CadastroPage(),
+              '/home': (context) => LoginScreen(),
+              '/index': (context) => IndexPage(),
+              '/listagenda': (context) => ListAgenda(),
+              '/agenda': (context) => AgendamentoPage(),
+              '/listorcamento': (context) => ListOrcamento(),
+              '/orcamento': (context) => OrcamentoPage(),
+              '/servicos': (context) => ServicosPage(),
             },
           );
         });
