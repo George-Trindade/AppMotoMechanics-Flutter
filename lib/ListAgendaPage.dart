@@ -9,7 +9,7 @@ class _ListAgendaState extends State<ListAgenda> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.white),
+      theme: ThemeData(primaryColor: Colors.red[600]),
       home: Scaffold(
         appBar: AppBar(
             title: Row(
@@ -82,7 +82,7 @@ class _ListAgendaState extends State<ListAgenda> {
             Icons.add,
           ),
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed('/agenda');
+            Navigator.of(context).pushNamed('/agenda');
           },
         ),
         drawer: Container(
@@ -131,6 +131,14 @@ class _ListAgendaState extends State<ListAgenda> {
                   trailing: Icon(Icons.arrow_forward),
                   onTap: () {
                     Navigator.of(context).pushReplacementNamed('/servicos');
+                  }),
+              ListTile(
+                  leading: Icon(Icons.motorcycle),
+                  title: Text("Veiculos"),
+                  subtitle: Text("Meus Veiculos..."),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    Navigator.of(context).pushReplacementNamed('/veiculos');
                   }),
             ],
           ),

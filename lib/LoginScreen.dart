@@ -93,11 +93,11 @@ class _LoginScreenState extends State<LoginScreen> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
-        color: Colors.black,
+        color: Colors.white,
         child: Text(
           'Entrar',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             letterSpacing: 1.5,
             fontSize: 14.0,
             fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Text(
           '-- Ou --',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.w400,
           ),
         ),
@@ -177,8 +177,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: SystemUiOverlayStyle.light,
+      body: Container(
+        color: Colors.red[600],
+        //value: SystemUiOverlayStyle.light,
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Stack(
@@ -186,7 +187,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 height: double.infinity,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.white),
+                decoration: BoxDecoration(color: Colors.red[600]),
               ),
               Container(
                 height: double.infinity,
@@ -204,8 +205,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 100,
                         child: Image.asset('images/motocicleta.png'),
                       ),
+                      Text('Moto',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'OpenSans',
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                          )),
                       Text(
-                        'MotoMechanics',
+                        'Mechanics',
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'OpenSans',

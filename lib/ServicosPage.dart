@@ -10,7 +10,7 @@ class _ServicosPageState extends State<ServicosPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.white),
+      theme: ThemeData(primaryColor: Colors.red[600]),
       home: Scaffold(
         appBar: AppBar(
             title: Row(
@@ -133,6 +133,14 @@ class _ServicosPageState extends State<ServicosPage> {
                   trailing: Icon(Icons.arrow_forward),
                   onTap: () {
                     Navigator.of(context).pushReplacementNamed('/servicos');
+                  }),
+              ListTile(
+                  leading: Icon(Icons.motorcycle),
+                  title: Text("Veiculos"),
+                  subtitle: Text("Meus Veiculos..."),
+                  trailing: Icon(Icons.arrow_forward),
+                  onTap: () {
+                    Navigator.of(context).pushReplacementNamed('/veiculos');
                   }),
             ],
           ),
